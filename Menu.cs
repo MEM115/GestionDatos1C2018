@@ -15,18 +15,24 @@ namespace FrbaHotel
         public Menu()
         {
             InitializeComponent();
-            LabelUserLogueado.Text = Clases.LoginInfo.GetUsuario();
-            List<Clases.Funcionalidad> funcionalidades = Clases.LoginInfo.GetFuncionalidad();
-            foreach (Clases.Funcionalidad func in funcionalidades)
+            LabelUserLogueado.Text = Login.Login.Usuario;
+            DataTable resultado = SqlConexion.consultaQuery("SELECT Descripcion FROM Funcionalidades f JOIN Funcionalidades_X_Rol x on x.ID_Funcionalidad = f.ID_Funcionalidad where x.ID_Rol = " + Login.LoginRol.idRol);
+            foreach (DataRow row in resultado.Rows)
             {
-                foreach(Control con in this.Controls)
+                foreach (Control con in Controls)
                 {
-                    if (func.Descripcion == con.Text)
+                    if (row[0].ToString() == con.Text)
                     {
                         con.Show();
                     }
                 }
             }
+        }
+
+        private void ButtonRol_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AbmRol.ListadoRol().Show();
         }
     }
 }

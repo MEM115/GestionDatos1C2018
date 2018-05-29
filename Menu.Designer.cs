@@ -63,6 +63,7 @@
             this.ButtonRol.Text = "ABM de Rol";
             this.ButtonRol.UseVisualStyleBackColor = true;
             this.ButtonRol.Visible = false;
+            this.ButtonRol.Click += new System.EventHandler(this.ButtonRol_Click);
             // 
             // ButtonCliente
             // 
@@ -201,7 +202,7 @@
             this.Controls.Add(this.ButtonCliente);
             this.Controls.Add(this.ButtonRol);
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = "Menu Principal";
             this.ResumeLayout(false);
             this.PerformLayout();
 

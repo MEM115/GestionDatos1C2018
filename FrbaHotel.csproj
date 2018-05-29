@@ -81,11 +81,17 @@
     <Compile Include="AbmRegimen\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmRol\Form1.cs">
+    <Compile Include="AbmRol\ABMRol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmRol\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AbmRol\ABMRol.Designer.cs">
+      <DependentUpon>ABMRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\ListadoRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\ListadoRol.Designer.cs">
+      <DependentUpon>ListadoRol.cs</DependentUpon>
     </Compile>
     <Compile Include="CancelarReserva\Form1.cs">
       <SubType>Form</SubType>
@@ -93,9 +99,12 @@
     <Compile Include="CancelarReserva\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Funcionalidad.cs" />
-    <Compile Include="Clases\LoginInfo.cs" />
-    <Compile Include="Clases\Rol.cs" />
+    <Compile Include="Login\LoginRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginRol.Designer.cs">
+      <DependentUpon>LoginRol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +143,16 @@
     <Compile Include="RegistrarEstadia\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlConexion.cs" />
+    <EmbeddedResource Include="AbmRol\ABMRol.resx">
+      <DependentUpon>ABMRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\ListadoRol.resx">
+      <DependentUpon>ListadoRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginRol.resx">
+      <DependentUpon>LoginRol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>

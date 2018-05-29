@@ -87,12 +87,13 @@
             this.ButtonGuest.TabIndex = 5;
             this.ButtonGuest.Text = "Ingresar como invitado";
             this.ButtonGuest.UseVisualStyleBackColor = true;
+            this.ButtonGuest.Click += new System.EventHandler(this.ButtonGuest_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 278);
+            this.ClientSize = new System.Drawing.Size(269, 278);
             this.Controls.Add(this.ButtonGuest);
             this.Controls.Add(this.ButtonLogin);
             this.Controls.Add(this.TextboxPassword);
